@@ -28,7 +28,7 @@ APP_NAME = "PoE Watcher"
 
 class Config(configparser.ConfigParser):
     def __init__(self):
-        super().__init__(interpolation=None)
+        super(Config, self).__init__(interpolation=None)
 
     def get_actions(self, section):
         raw = self.get(section, "actions").split("\n")
